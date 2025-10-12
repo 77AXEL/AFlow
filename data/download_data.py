@@ -76,11 +76,6 @@ datasets_to_download: Dict[str, Dict[str, str]] = {
         "filename": "result.tar.gz",
         "extract_path": "data/results",
     },
-    "initial_rounds": {
-        "url": "https://drive.google.com/uc?export=download&id=1UBoW4WBWjX2gs4I_jq3ALdXeLdwDJMdP",
-        "filename": "initial_rounds.tar.gz",
-        "extract_path": "workspace",
-    },
 }
 
 
@@ -102,7 +97,7 @@ def download(required_datasets, force_download: bool = False):
 
 def test_download():
     """Test function to verify download and extraction process"""
-    test_datasets = ["datasets", "results", "initial_rounds"]
+    test_datasets = ["datasets", "results"]
     for name in test_datasets:
         dataset = datasets_to_download[name]
         extract_path = dataset["extract_path"]
